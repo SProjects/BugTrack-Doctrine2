@@ -1,0 +1,19 @@
+{
+    "name": "daniel/doctrinespike",
+    "description": "Test project to test the use of Doctrine2 ORM with Code Igniter 2 PHP framework",
+    "require-dev": {
+        "phpunit/phpunit": "3.*",
+        "phpunit/dbunit": ">=1.2",
+        "phpunit/phpunit-selenium": ">=1.2"
+    },
+    "authors": [
+        {
+            "name": "Sebuuma Daniel",
+            "email": "sedzsoft@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    }
+}
