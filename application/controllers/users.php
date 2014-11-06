@@ -23,11 +23,13 @@ class Users extends CI_Controller{
     }
 
     public function create(){
-        $user = new Entity\User;
-        $user->setName($_POST['name']);
-        $user->setUsername($_POST['username']);
-        $user->setPassword($_POST['password']);
-        $user->setEmail($_POST['email']);
+        $userArray = array(
+            'name' => $_POST['name'],
+            'username' => $_POST['username'],
+            'password' => $_POST['password'],
+            'email' => $_POST['email']
+        );
+        $user = Entity\User::fromArray($userArray);
 
         try{
             $this->entityManager->persist($user);
