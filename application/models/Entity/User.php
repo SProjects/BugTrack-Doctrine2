@@ -78,6 +78,17 @@ class User {
         return $values[$fieldName];
     }
 
+    public static function fromArray($userArray = NULL){
+        if($userArray == NULL)
+            return FALSE;
+        $user = new User;
+        $user->setName($userArray['name']);
+        $user->setEmail($userArray['email']);
+        $user->setUsername($userArray['username']);
+        $user->setPassword($userArray['password']);
+        return $user;
+    }
+
     public static function toArray($user){
         return array('id'=>$user->displayInfo('id'),
                     'name'=>$user->displayInfo('name'),
