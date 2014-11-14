@@ -23,6 +23,10 @@ class Users extends CI_Controller{
     }
 
     public function create(){
+        if($_POST['name'] == '' ||$_POST['username'] == '' || $_POST['password'] == '' || $_POST['email'] == '' ){
+            redirect('users');
+        }
+
         $userArray = array(
             'name' => $_POST['name'],
             'username' => $_POST['username'],
