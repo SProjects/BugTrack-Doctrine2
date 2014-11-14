@@ -3,3 +3,9 @@
 composer.lock
 application/config/database.php
 application/config/testing/database.php
+*/config/development
+*/logs/log-*.php
+*/logs/!index.html
+*/cache/*
+*/cache/!index.html
+*/cache/!.htaccess
